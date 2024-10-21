@@ -42,7 +42,7 @@ VALIDATE $? "Restart mysql"
 
 mysql -h mysql.charanworld.online -u root -pExpenseApp@1 -e 'show databases;' &>>$LOG_FILE
 
-if [ $? -ne 0]
+if [ $? -ne 0 ]
 then
     echo "Mysql password not set... setting password now.."
     mysql_secure_installation --set-root ExpenseApp@1
