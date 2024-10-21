@@ -65,6 +65,7 @@ VALIDATE $? "Downloading backend.zip"
 
 npm install &>>$LOG_FILE
 cp /home/ec2-user/expense_shell/backend.service /etc/systemd/system/backend.service
+VALIDATE $? "copy backend file"
 
 #loading data before running service
 
