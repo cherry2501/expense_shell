@@ -34,10 +34,10 @@ VALIDATE(){
 dnf install nginx -y &>>$LOG_FILE
 VALIDATE $? "install NGINX"
 
-systemctl enable nginx -y &>>$LOG_FILE
+systemctl enable nginx &>>$LOG_FILE
 VALIDATE $? "enable nginx"
 
-systemctl enable nginx -y &>>$LOG_FILE
+systemctl start nginx &>>$LOG_FILE
 VALIDATE $? "enable nginx"
 
 rm -rf /usr/share/nginx/html/* &>>$LOG_FILE
