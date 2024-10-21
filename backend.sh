@@ -75,8 +75,8 @@ VALIDATE $? "installing mysql"
 mysql -h mysql.charanworld.online -uroot -pExpenseApp@1 < /app/schema/backend.sql &>>$LOG_FILE
 VALIDATE $? "Schema loading"
 
-systemctl deamon-reload &>>$LOG_FILE
-VALIDATE $? "Reload-Deamon"
+systemctl daemon-reload &>>$LOG_FILE
+VALIDATE $? "Reload-Daemon"
 
 system enable backend &>>$LOG_FILE
 VALIDATE $? "Enable Backend"
